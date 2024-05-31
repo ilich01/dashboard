@@ -11,13 +11,13 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "outDir": "./dist", // Укажите отдельный каталог для выходных файлов
+    "outDir": "./dist",
     "baseUrl": "./src",
     "paths": {
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"]
     }
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/context/ContextProvider.js"],
   "exclude": ["node_modules", "dist"]
 }
