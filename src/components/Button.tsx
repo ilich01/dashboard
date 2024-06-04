@@ -1,6 +1,12 @@
 import React from 'react'
-
-const Button = ({ backgroundColor, color, size, text, borderRadius }) => {
+type ButtonProps = {
+  backgroundColor: string
+  color: string
+  size?: string
+  text: string
+  borderRadius: string
+}
+const Button: React.FC<ButtonProps> = ({ backgroundColor, color, size, text, borderRadius }) => {
   return (
     <button
       type="button"
