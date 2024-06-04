@@ -1,20 +1,6 @@
 import Header from 'components/Header'
 import React from 'react'
-import {
-  GridComponent,
-  ColumnsDirective,
-  ColumnDirective,
-  Resize,
-  Sort,
-  ContextMenu,
-  Filter,
-  Page,
-  ExcelExport,
-  PdfExport,
-  Edit,
-  Toolbar,
-  Inject,
-} from '@syncfusion/ej2-react-grids'
+import { GridComponent, ColumnsDirective, ColumnDirective, Page, Toolbar, Inject } from '@syncfusion/ej2-react-grids'
 import { employeesData, employeesGrid } from 'data/dummy'
 
 const Emploees = () => {
