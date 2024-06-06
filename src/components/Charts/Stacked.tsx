@@ -14,9 +14,10 @@ import { barPrimaryXAxis, stackedCustomSeries, stackedPrimaryXAxis, stackedPrima
 type StackedProps = {
   width: string
   height: string
+  currentMode?: string
 }
 
-const Stacked: React.FC<StackedProps> = ({ width, height }) => {
+const Stacked: React.FC<StackedProps> = ({ width, height, currentMode }) => {
   return (
     <div>
       <ChartComponent
@@ -27,6 +28,7 @@ const Stacked: React.FC<StackedProps> = ({ width, height }) => {
         primaryXAxis={stackedPrimaryXAxis as AxisModel}
         chartArea={{ border: { width: 0 } }}
         tooltip={{ enable: true }}
+        background={currentMode === 'Dark' ? '#33373E' : '#fff'}
         legendSettings={{ background: 'white' }}
       >
         <Inject services={[Legend, Category, StackingColumnSeries, Tooltip]} />

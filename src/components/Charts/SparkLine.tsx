@@ -26,6 +26,7 @@ const SparkLine: React.FC<SparkLineProps> = ({ currentColor, id, color, type, he
       xName="x"
       yName="yval"
       type={type}
+      // eslint-disable-next-line no-template-curly-in-string
       tooltipSettings={{ visible: true, format: '${x} : data ${yval}', trackLineSettings: { visible: true } }}
     >
       <Inject services={[SparklineTooltip]} />

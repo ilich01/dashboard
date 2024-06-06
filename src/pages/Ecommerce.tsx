@@ -5,6 +5,7 @@ import { Stacked, Pie, Button, SparkLine } from '../components'
 import { earningData, SparklineAreaData, ecomPieChartData } from 'data/dummy'
 import { useStateContext } from 'context/ContextProvider'
 const Ecommerce = () => {
+  const { currentColor, currentMode } = useStateContext()
   return (
     <div className="mt-12">
       <div className="flex flex-wrap lg:flex-nowrap justify-center">
@@ -16,7 +17,7 @@ const Ecommerce = () => {
             </div>
           </div>
           <div className="mt-6">
-            <Button color="white" backgroundColor="blue" text="Download" borderRadius="10px" size="md" />
+            <Button color="white" backgroundColor={currentColor} text="Download" borderRadius="10px" size="md" />
           </div>
         </div>
         <div className="flex m-3 flex-wrap justify-center gap-1 items-center">
@@ -76,21 +77,21 @@ const Ecommerce = () => {
               </div>
               <div className="mt-5">
                 <SparkLine
-                  currentColor="blue"
+                  currentColor={currentColor}
                   id="sparkline-data"
                   type="Line"
                   height="80px"
                   width="250px"
                   data={SparklineAreaData}
-                  color="blue"
+                  color={currentColor}
                 />
               </div>
               <div className="mt-10">
-                <Button backgroundColor="blue" color="white" text="Download" borderRadius="10px" />
+                <Button backgroundColor={currentColor} color="white" text="Download" borderRadius="10px" />
               </div>
             </div>
             <div>
-              <Stacked width="320px" height="360px" />
+              <Stacked currentMode={currentMode as string} width="320px" height="360px" />
             </div>
           </div>
         </div>
