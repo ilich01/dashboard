@@ -96,6 +96,7 @@ const App = () => {
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
+            <Footer position="center" />
           </div>
         </div>
       </BrowserRouter>
