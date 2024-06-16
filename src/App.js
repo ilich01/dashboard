@@ -34,6 +34,7 @@ const App = () => {
       setCurrentColor(currentThemeColor)
       setCurrentMode(currentThemeMode)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

@@ -10,7 +10,7 @@ import {
   AxisModel,
   SeriesCollectionDirective,
 } from '@syncfusion/ej2-react-charts'
-import { barPrimaryXAxis, stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from 'data/dummy'
+import { stackedCustomSeries, stackedPrimaryXAxis, stackedPrimaryYAxis } from 'data/dummy'
 type StackedProps = {
   width: string
   height: string

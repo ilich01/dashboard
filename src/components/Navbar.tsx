@@ -11,8 +11,7 @@ import { Cart, Chat, Notification, UserProfile } from '.'
 import NavButton from './NavButton'
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClick, handleClick, screenSize, setScreenSize, currentColor } =
-    useStateContext()
+  const { setActiveMenu, isClicked, handleClick, screenSize, setScreenSize, currentColor } = useStateContext()
   useEffect(() => {
     const handleResize = () => setScreenSize(window.innerWidth)
     window.addEventListener('resize', handleResize)
@@ -25,6 +24,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [screenSize])
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
